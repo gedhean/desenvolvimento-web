@@ -1,0 +1,18 @@
+{
+	"personalData": {
+		"name": "Gêdhean Alves Vieria",
+		"sex": "Masculino",
+		"address": "Fortaleza - CE, Brasil",
+		"born": "08/04/1995"		
+	},
+	"education": [
+		{
+			"course": "Ensino médio completo",
+			"institution": "Colégio Darwin"
+		},
+		{
+			"course": "Ensino superior incompleto - Engenharia de Computação",
+			"institution": "Univers"
+		}
+	]
+}
