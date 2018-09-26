@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/tst.css">
+</head> 
+<body>
+<h1>ARQUIVO A3</h1>
+<p>Eu gosto de frio e chuva!</p>
+<img src="img/pic_trulli.jpg" alt="Itelian Trulli"> 
+<button type="button" onclick="changeStyle(1)"> Estilo 1 </button>
+<button type="button" onclick="changeStyle(2)"> Estilo 2 </button>
+</body>
+<script>
+ function changeStyle(estilo)
+  {
+    var styles = document.createElement('link');
+    styles.type="text/css";
+    styles.rel="stylesheet";
+    if (estilo !== 1)
+		styles.href="css/tst.css";
+	else
+		styles.href="css/tst2.css";
+    document.head.appendChild(styles);
+ }
+</script>
+</html> 

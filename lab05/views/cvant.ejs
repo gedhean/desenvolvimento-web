@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/tst2.css">
+  </head>
+  <body>
+
+    <div class="ch1">
+		<%if (usu) {  %>
+			<h1> Seção 1 </h1> 
+			<p>
+			<%- 
+				
+				include(usu+'1.txt');
+			%>
+			</p>
+			<h1> Seção 2 </h1> 
+			<p>
+			<%- 
+				include(usu+'2.txt');
+			%>
+			</p>
+		<% } %>
+    </div>
+  </body>
+</html>
