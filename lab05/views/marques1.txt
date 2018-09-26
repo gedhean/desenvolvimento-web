@@ -1,3 +1,0 @@
-linha de marques1.txt
-outra linha de marques1.txt
-e mais uma linha

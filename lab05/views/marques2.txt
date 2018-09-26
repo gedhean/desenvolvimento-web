@@ -1,2 +1,0 @@
-linha de marques2.txt <br>
-outra linha de marques2.txt

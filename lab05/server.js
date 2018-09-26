@@ -5,15 +5,18 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const request = require('request');
+// const request = require('request');
 const app = express()
 const fs = require("fs");
 const path = require('path');
+const expressLayouts = require('express-ejs-layouts');
 
-app.use('/', express.static(path.join( __dirname + '/public')));
+console.log(__dirname)
+app.use(express.static(path.join( __dirname + '/public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname + '/views'))
 app.set('view engine', 'ejs')
+app.use(expressLayouts)
 
 app.get('/users/:userId/books/:bookId', function (req, res) {
   //res.send(req.params)
@@ -21,7 +24,7 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 })
 
 app.get('/', function (req, res) {
-  res.render('index', {teste: "Servidor simples para carga de arquivos fixos e de scripts em EJS"});
+  res.render('index', {welcome: "Welcome to the CV land."});
 })
 
 app.get('/cv/:usu', function(req,res) {
