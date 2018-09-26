@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= userName %> </title>
+    <link rel="stylesheet" type="text/css" href="/css/tst2.css">
+  </head>
+  <body>
+    <div class="ch1">
+		<h1> Seção 1 </h1> 
+		<% for (var i=0; i<linesSec1.length; i++) {%>
+		<p> <%= linesSec1[i] %> </p>
+		<% } %>
+
+		<h1> Seção 2 </h1> 
+		<ul>
+		<% for (var i=0; i<linesSec2.length; i++) {%>
+		<li> <%= linesSec2[i] %> </li>
+		<% } %>
+		</ul>
+
+	</div>
+  </body>
+</html>
