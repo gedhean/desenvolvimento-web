@@ -1,8 +1,42 @@
-<%- contentFor(head) %>
-<% include partials/head %>
+<!DOCTYPE html>
+<html>
 
-<%- contentFor(header)
-<% include partials/header %>
+<head>
+    <%- include("partials/head"); -%>
+</head>
 
-<%- contentFor(main) %>
-<p><%= welcome %></p>        
+<body>
+    <%- include("partials/header"); -%>
+
+    <main>
+        <div class="container">
+            <div class="row gutter-5">
+                <div class="col">
+                    <h1 class="text-center">
+                        <%= welcome %>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Curriculms</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected class="text-black-50">Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
