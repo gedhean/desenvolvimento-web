@@ -19,20 +19,22 @@
             </div>
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Curriculms</label>
+                    <form action="/cv" method="get">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Curriculms</label>
+                            </div>
+                            <select name="user" class="custom-select" id="inputGroupSelect01">
+                                <option selected class="text-black-50">Choose...</option>
+                                <% users.forEach(function(user){ %>
+                                <option value=<%=user%>><%=user%></option>
+                                <% }) %>
+                            </select>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Button</button>
+                            </div>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option selected class="text-black-50">Choose...</option>
-                            <% users.forEach(function(user){ %>
-                            <option value=<%=user%>><%=user%></option>
-                            <% }) %>
-                        </select>
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">Button</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

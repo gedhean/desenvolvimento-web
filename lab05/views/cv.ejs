@@ -8,26 +8,44 @@
 <body>
 	<div class="container">
 		<main>
-			<h1>Perfil Profissional - Gêdhean Alves</h1>
+			<h1>Perfil Profissional - <%= user.name %></h1>
 			
 			<h2>Dados pessoais</h2>
 			<ul id="personalData">
-				
+				<li><strong>Nome</strong>: <%= user.name%>;</li>
+				<li><strong>Sexo</strong>: <%= user.sex%>;</li>
+				<li><strong>Endereço</strong>: <%= user.address%>;</li>
+				<li><strong>Data de nascimento</strong>: <%= user.born%>.</li>
 			</ul>
 
 			<h2>Formação escolar</h2>
 			<ul id="education">
-				
+				<% education.forEach(function(edu) { %>	
+					<li>
+						<strong>${education.course}</strong> -
+						<a href=<%=education.url %> target="_blank"><%=education.institution%></a>;
+					</li>
+				<% })%>
 			</ul>
 
 			<h2>Idiomas</h2>
 			<ul id="idioms">
-			
+				<% idioms.forEach(function (idiom) { %>
+					<li><strong><%=idiom.language%></strong> - Nível: <%= idiom.level %>;</li>
+				<% }) %>
 			</ul>
 
 			<h2>Cursos adicionais</h2>
 			<ul id="courses">
-				
+				<% courses.forEach(function (course) { %>
+					<li>
+					<strong><%=course.name%></strong> - 
+					<a href=<%=course.url%> target="_blank"><%=course.institution%></a>;
+					</li>
+					<div class="img-2">
+						<img id="ccb-img" src=<%=course.img%> alt="" width="447" height="120">			
+					</div>
+				<% }) %>
 			</ul>
 
 			<h2 style="text-align: center;">Obrigado!</h2>
