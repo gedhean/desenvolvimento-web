@@ -1,0 +1,43 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Express, upload de arquivos com Multer</title>
+    <%- include("partials/head"); -%>
+</head>
+<body> 
+    <%- include("partials/header"); -%>
+    <main>
+        <div class="container">
+            <h1>Upload cv images</h1>
+            <form action='file/upload' method='post' encType="multipart/form-data">
+                <div class="form-group">
+                    <label for="chosse-user">Select a user</label>
+                    <select name="user" class="custom-select" id="chosse-user">
+                    <option selected class="text-black-50">User</option>
+                    <% users.forEach(function(user){ %>
+                    <option value=<%=user%>><%=user%></option>
+                    <% }) %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="section-user">Section</label>
+                    <input type="text" class="form-control" name="section" id="section-user"/>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <input type="file" class="form-control" name="file" />
+                        </div>
+                        <div class="col">
+                            <input type='submit' class="btn btn-primary" value='Upload' />
+                        </div>
+                    </div>
+                </div>
+            </form>	     
+        </div>
+    </main>
+</body>
+</html>
+
