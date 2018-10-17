@@ -22,13 +22,13 @@
             "name": "De Informática",
             "url": "https://www.origamid.com/",
             "institution": "Origamid.com",
-            "img": "https://formataropc.com/wp-content/uploads/2017/07/como-formatar-computador-350x230.jpg"
+            "img": "./../uploads/fulano-origamid.png"
         },
         {
             "name": "Casa de Cultura Britânica",
             "url": "http://www.casasdeculturaestrangeira.ufc.br/",
             "institution": "UFC",
-            "img": "http://www.casasdeculturaestrangeira.ufc.br/wp-content/uploads/2017/05/topo.jpg"
+            "img": "./../uploads/fulano-ccb.png"
         }
     ],
     "idioms": [

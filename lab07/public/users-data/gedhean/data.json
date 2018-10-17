@@ -22,13 +22,13 @@
             "name": "Web Design Completo",
             "url": "https://www.origamid.com/",
             "institution": "Origamid.com",
-            "img": "https://i.ytimg.com/vi/rYjHlEIkRGk/maxresdefault.jpg"
+            "img": "./../uploads/gedhean-origamid.png"
         },
         {
             "name": "Casa de Cultura Britânica",
             "url": "http://www.casasdeculturaestrangeira.ufc.br/",
             "institution": "UFC",
-            "img": "http://www.casasdeculturaestrangeira.ufc.br/wp-content/uploads/2017/05/topo.jpg"
+            "img": "./../uploads/gedhean-ccb.png"
         }
     ],
     "idioms": [
