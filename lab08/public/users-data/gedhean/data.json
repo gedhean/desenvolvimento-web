@@ -1,0 +1,44 @@
+{
+    "user": {
+		"name": "Gêdhean Alves Vieria",
+		"sex": "Masculino",
+		"address": "Fortaleza - CE, Brasil",
+		"born": "08/04/1995"		
+    },
+    "education": [
+		{
+			"course": "Ensino médio completo",
+            "institution": "Colégio Darwin",
+            "url": "http://www.colegiodarwin.com.br/"
+		},
+		{
+			"course": "Ensino superior incompleto - Engenharia de Computação",
+            "institution": "Universidade Federal do Ceará",
+            "url": "http://www.ufc.br/"
+		}
+    ],
+    "courses": [
+        {
+            "name": "Web Design Completo",
+            "url": "https://www.origamid.com/",
+            "institution": "Origamid.com",
+            "img": "./../uploads/gedhean-origamid.png"
+        },
+        {
+            "name": "Casa de Cultura Britânica",
+            "url": "http://www.casasdeculturaestrangeira.ufc.br/",
+            "institution": "UFC",
+            "img": "./../uploads/gedhean-ccb.png"
+        }
+    ],
+    "idioms": [
+        {
+            "language": "Português",
+            "level": "nativo"
+        },
+        {
+            "language": "Inglês",
+            "level": "intermediário"
+        }
+    ]
+}
