@@ -1,0 +1,48 @@
+{
+    "user": {
+		"name": "Fulana da Silva",
+		"sex": "Feminina",
+		"address": "Xatuba - CE, Quenia",
+		"born": "05/04/2000"		
+    },
+    "education": [
+		{
+			"course": "Ensino médio completo",
+            "institution": "Colégio Darwin",
+            "url": "http://www.colegiodarwin.com.br/"
+		},
+		{
+			"course": "Ensino superior em Nada",
+            "institution": "Universidade Federal do Ceararoca",
+            "url": "http://www.ufc.br/"
+		}
+    ],
+    "courses": [
+        {
+            "name": "De Informática",
+            "url": "https://www.origamid.com/",
+            "institution": "Origamid.com",
+            "img": "./../uploads/fulano-origamid.png"
+        },
+        {
+            "name": "Casa de Cultura Britânica",
+            "url": "http://www.casasdeculturaestrangeira.ufc.br/",
+            "institution": "UFC",
+            "img": "./../uploads/fulano-ccb.png"
+        }
+    ],
+    "idioms": [
+        {
+            "language": "Português",
+            "level": "nativo"
+        },
+        {
+            "language": "Inglês",
+            "level": "intermediário"
+        },
+        {
+            "language": "Besteira",
+            "level": "Nativo"
+        }
+    ]
+}
