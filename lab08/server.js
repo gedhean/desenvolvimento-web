@@ -37,31 +37,10 @@ app.get('/', function(req, res) {
   })
 })
 
-// app.get('/cv', function(req, res) {
-//   const user = req.query.user
-//   const users = fs.readdirSync(path.resolve(__dirname + '/public/users-data'))
-
-//   if (users.includes(user)) {
-//     fs.readFile(
-//       path.resolve(`${__dirname}/public/users-data/${user}/data.json`),
-//       (err, userData) => {
-//         if (err) {
-//           res.render('404')
-//           console.log(err)
-//         }
-//         res.render('cv', JSON.parse(userData))
-//         // console.log(req.query, JSON.parse(userData))
-//       }
-//     )
-//   } else {
-//     res.render('404')
-//   }
-// })
-
 app.get('/cv', function(req, res) {
   if (req.session.user) {
     const cv = findCv(req.user.email)
-    if (cv) res.render('cv', { cvHtml: cv.cvHtml })
+    if (cv) res.render('cv', { cvHtml: cv.cvHtml, color: cv.color })
     else res.redirect('/cv/new')
   } else res.redirect('/login?from=/cv')
 })
@@ -76,7 +55,7 @@ app.post('/cv/new', function(req, res) {
   const user = req.session.user
   if (user && user.email && req.body.cv) {
     console.log('User creating cv...:', req.session.user.name)
-    saveCv(user.email, req.body.cv)
+    saveCv(user.email, req.body.cv, req.body.color)
     res.send(JSON.stringify({ message: 'CV criado com sucesso' }))
   } else {
     res.send(JSON.stringify({ error: 'Usuário precisa logar' }))

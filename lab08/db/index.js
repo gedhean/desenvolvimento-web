@@ -45,9 +45,9 @@ function findUser(query) {
   return User.findOne(query)
 }
 
-function saveCv(userEmail, cvHtml) {
+function saveCv(userEmail, cvHtml, color = "#982720") {
   Cv.findAndRemove({ owner: userEmail })
-  const cv = Cv.insertOne({ owner: userEmail, cvHtml })
+  const cv = Cv.insertOne({ owner: userEmail, cvHtml, color })
   console.log('Saving cv on db...', cv.owner)
   console.log('User cvs:', Cv.find().length)
 }

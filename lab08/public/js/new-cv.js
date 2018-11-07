@@ -115,7 +115,10 @@ onready(function() {
     window
       .fetch('/cv/new', {
         method: 'post',
-        body: JSON.stringify({ cv: cvHtml }),
+        body: JSON.stringify({
+          cv: cvHtml,
+          color: document.documentElement.style.getPropertyValue('--primary-color')
+        }),
         headers: {
           'Content-Type': 'application/json'
         },
