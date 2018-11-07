@@ -11,6 +11,7 @@ const path = require('path')
 const multer = require('multer')
 const cookieParser = require('cookie-parser');
 const session = require('express-session')
+const { createUserIfNotExist } = require('./db')
 
 app.use(express.static(path.join(__dirname + '/public')))
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -103,6 +104,16 @@ app.post('/login', function(req, res) {
   })
 })
 
-app.listen(8080, function() {
-  console.log('Example app listening on port 8080!')
+app.get('/register', function(req, res) {
+  res.render('register')
+})
+
+app.post('/register', function(req, res) {
+  createUserIfNotExist(req.body)
+  res.redirect('/')  
+})
+
+
+app.listen(3000, function() {
+  console.log('Example app listening on port 3000!')
 })
