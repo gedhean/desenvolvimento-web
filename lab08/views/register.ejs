@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Login</title>
     <%- include("partials/head"); -%>
 </head>
-
 <body>
     <%- include("partials/header"); -%>
-
     <main>
         <div class="container">
             <div class="row gutter-5">
@@ -18,34 +15,30 @@
             </div>
             <div class="row">
               <div class="col-md-8 mx-auto">
-                <form action="/register" method="post">
+                <form method="post">
                   <div class="form-group">
                     <label for="inputName">Nome</label>
-                    <input name="name" type="text" id="inputName" class="form-control" placeholder="Nome completo">
+                    <input name="name" type="text" id="inputName" class="form-control" placeholder="Nome completo" required>
                   </div>  
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail">Email</label>
-                      <input name="email"type="email" class="form-control" id="inputEmail" placeholder="Email">
+                      <input name="email"type="email" class="form-control" id="inputEmail" placeholder="Email" required>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Senha</label>
-                      <input name="password" type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      <input name="password" type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputAddress">Endereço completo</label>
-                    <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
                   </div>
                   <div class="form-group">
-                    <div class="form-check">
-                      <input name="isAdmin" class="form-check-input" type="checkbox" id="gridCheck">
-                      <label class="form-check-label" for="gridCheck">
-                        Administrador?
-                      </label>
-                    </div>
+                    <label for="inutPhone">Telefone</label>
+                    <input name="phone" class="form-control" type="number" id="inutPhone" required>
                   </div>
-                  <button type="submit" class="btn btn-primary">Resgistrar e Entrar</button>
+                  <button type="submit" class="btn btn-primary">Resgistrar</button>
                 </form>
               </div>
             </div>

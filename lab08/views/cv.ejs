@@ -1,76 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Perfil Profissional - <%=user.name%></title>
-    <%- include("partials/head"); -%>	
-	<link id="style" rel="stylesheet" type="text/css" href="./../css/style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <%- include("partials/head"); -%>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/new-cv.css">
+  <title>Currículo</title>
+  <style>
+    .wrapper {
+      margin-top: 0px;
+    }
+    .section:hover, .sec-head:hover {
+      border: 2px dashed transparent;
+    }
+    .section:hover .create-sec-item,  .section:hover .remove-sec-item {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-	<%- include("partials/header"); -%>
-
-	<div class="container">
-		<main class="page-pro">
-			<h1>Perfil Profissional - <%= user.name %></h1>
-			
-			<h2>Dados pessoais</h2>
-			<ul id="personalData">
-				<li><strong>Nome</strong>: <%= user.name%>;</li>
-				<li><strong>Sexo</strong>: <%= user.sex%>;</li>
-				<li><strong>Endereço</strong>: <%= user.address%>;</li>
-				<li><strong>Data de nascimento</strong>: <%= user.born%>.</li>
-			</ul>
-
-			<h2>Formação escolar</h2>
-			<ul id="education">
-				<% education.forEach(function(edu) { %>	
-					<li>
-						<strong><%= edu.course %></strong> -
-						<a href=<%=edu.url %> target="_blank"><%=edu.institution%></a>;
-					</li>
-				<% })%>
-			</ul>
-
-			<h2>Idiomas</h2>
-			<ul id="idioms">
-				<% idioms.forEach(function (idiom) { %>
-					<li><strong><%=idiom.language%></strong> - Nível: <%= idiom.level %>;</li>
-				<% }) %>
-			</ul>
-
-			<h2>Cursos adicionais</h2>
-			<ul id="courses">
-				<% courses.forEach(function (course) { %>
-					<li>
-					<strong><%=course.name%></strong> - 
-					<a href=<%=course.url%> target="_blank"><%=course.institution%></a>;
-					</li>
-					<div class="img-2">
-						<img id="ccb-img" src=<%=course.img%> alt="" width="447" height="120">			
-					</div>
-				<% }) %>
-			</ul>
-
-			<h2 style="text-align: center;">Obrigado!</h2>
-			<button id="tg-btn" onclick="toggleStyles();">Toggle Styles</button>
-		</main>		
-	</div>
-	<!-- JavaScript goes here -->
-	<script type="text/javascript">
-		var link = document.getElementById('style');
-		var styleOne = true;
-
-		function toggleStyles() {				
-			if (link) {
-				if(styleOne) {
-					styleOne = !styleOne;
-					link.href = './../css/style2.css';										
-				} else {
-					styleOne = !styleOne;
-					link.href = './../css/style1.css';
-				}
-			}
-		}
-	</script>
+  <%- include("partials/header"); -%>
+  <div class="row gutter-5">
+    <div class="col">
+      <h1 class="text-center">Seu currículo</h1>
+    </div>
+  </div>
+  <div class="wrapper">
+      <%- cvHtml %>
+  </div>  
 </body>
 </html>

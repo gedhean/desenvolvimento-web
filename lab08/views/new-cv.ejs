@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <%- include("partials/head"); -%>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/new-cv.css">
+  <title>Criar currículo</title>
+</head>
+<body>
+  <%- include("partials/header"); -%>
+  <div class="row gutter-5">
+    <div class="col">
+      <h1 class="text-center">Crie seu currículo</h1>
+    </div>
+  </div>
+
+  <div id="wysiwyg-text-editor">
+    <div class="menu-container">
+      <div id="menu-tool-bar">
+        <div class="menu-item">
+          <div class="menu-palette">
+            <input type="color" name="color" id="color-picker" value="#3331b4">
+          </div>
+          <span class="menu-lable">Cor</span>
+        </div>
+        <div class="menu-item" id="new-section">
+          <i class="menu-icon fa fa-list"></i>
+          <span class="menu-lable">Nova seção</span>
+        </div>
+        <div class="menu-item" id="sub-section-ul">
+          <i class="menu-icon fa fa-list-ul"></i>
+          <span class="menu-lable">Bullet</span>
+        </div><div class="menu-item" id="sub-section-ol">
+          <i class="menu-icon fa fa-list-ol"></i>
+          <span class="menu-lable">Ordenada</span>
+        </div>
+        <div class="menu-item" id="create-link">
+          <i class="menu-icon fa fa-link"></i>
+          <span class="menu-lable">Link</span>
+        </div>
+        <div class="menu-item" id="remove-link">
+          <i class="menu-icon fa fa-unlink"></i>
+          <span class="menu-lable">Unlink</span>
+        </div>
+        <div class="menu-item" id="insert-img">
+          <i class="menu-icon fa fa-image"></i>
+          <span class="menu-lable">Images</span>
+        </div>
+        <div class="menu-item" id="save-cv">
+          <i class="menu-icon fa fa-save"></i>
+          <span class="menu-lable">Salvar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div id="paper-cv" class="paper">
+      <div id="editable-area">
+        <ul class="cv-header no-style">
+          <li>
+            <p id="name" contenteditable="true" spellcheck="false">Seu nome completo</p>
+            <p id="profession" contenteditable="true">Profissão ou atividade</p>
+          </li>
+        </ul>
+        <ul class="no-style" id="sec-container">
+          <li id="section-1-default" class="sections">
+            <p class="section-title" contenteditable="true">Experiência de trabalho</p>
+            <div class="section-item-container section" id="sec-default-1">
+              <p class="section-subtitle" contenteditable="true">Cargo/Posição/Atividade</p>
+              <p class="section-item-description" contenteditable="true" spellcheck="false">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit mollitia quas laudantium.
+                Tenetur omnis esse unde quis incidunt eos, eaque at, consectetur quidem animi in odio eum dolor ab!
+              </p>
+              <div class="create-sec-item float-btn" data-action="create" data-secid="sec-default-1">
+                <i class="fa fa-plus" data-action="create" data-secid="sec-default-1"></i>
+              </div>
+              <!-- <div class="remove-sec float-btn" data-action="remove" data-secid="sec-default-1">
+                <i class="fa fa-minus" data-action="remove" data-secid="sec-default-1"></i>
+              </div> -->
+            </div>
+          </li>
+          <li id="section-2-default" class="sections">
+              <p class="section-title" contenteditable="true">Educação</p>
+              <div class="section-item-container section" id="sec-default-2">
+                <p class="section-subtitle" contenteditable="true">Título/Carreira/Curso</p>
+                <p class="section-item-description" contenteditable="true" spellcheck="false">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit mollitia quas laudantium.
+                  Tenetur omnis esse unde quis incidunt eos, eaque at, consectetur quidem animi in odio eum dolor ab!
+                </p>
+                <div class="create-sec-item float-btn" data-action="create" data-secid="sec-default-2">
+                  <i class="fa fa-plus" data-action="create" data-secid="sec-default-2"></i>
+                </div>
+                <!-- <div class="remove-sec float-btn" data-action="remove" data-secid="sec-default-2">
+                  <i class="fa fa-minus" data-action="remove" data-secid="sec-default-2"></i>
+                </div> -->
+              </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/new-cv.js"></script>
+</body>
+</html>
